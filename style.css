@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "微軟正黑體", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(
+    160deg,
+    #0b1f2a,   /* 深鐵藍 */
+    #12384d,   /* 工程藍 */
+    #1f5a73    /* 較亮藍 */
+  );
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 4px;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Section Card ===== */
+section {
+  background: white;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  margin-top: 0;
+  color: #243949;
+  border-left: 6px solid #517fa4;
+  padding-left: 12px;
+  font-size: 24px;
+}
+
+/* ===== List ===== */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* ===== QR Code ===== */
+img {
+  display: block;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  color: #888;
+  padding: 30px 10px;
+  font-size: 14px;
+}
+/* ===== Floating Contact Buttons ===== */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-buttons a {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.floating-line {
+  background: #06c755;
+}
+
+.floating-phone {
+  background: #1f5a73;
+}
+
+/* 手機版稍微放大，方便點 */
+@media (max-width: 768px) {
+  .floating-buttons a {
+    width: 62px;
+    height: 62px;
+    font-size: 28px;
+  }
+}
+
