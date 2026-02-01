@@ -24,21 +24,20 @@
 <p>LINE 官方聯絡：</p>
 <img src="images/line-qrcode.jpg" width="200">
 <p>掃描 QR Code 加 LINE 詢問</p>
- <a href="https://line.me/ti/p/52qOFX8iMA"
-     target="_blank"
-     style="
-       display:inline-block;
-       margin-top:10px;
-       padding:10px 18px;
-       background:#06c755;
-       color:white;
-       text-decoration:none;
-       border-radius:8px;
-       font-weight:bold;
-     ">
-    💬 點我用 LINE 聊天（手機）
-  </a>
-
+<a href="https://line.me/ti/p/52qOFX8iMA"
+   onclick="setTimeout(function(){ location.href='line://ti/p/52qOFX8iMA'; }, 100);"
+   style="
+     display:inline-block;
+     margin-top:10px;
+     padding:10px 18px;
+     background:#06c755;
+     color:white;
+     text-decoration:none;
+     border-radius:8px;
+     font-weight:bold;
+   ">
+  💬 點我用 LINE 聊天
+</a>
 </section>
 
 <section>
@@ -66,19 +65,25 @@
 <div class="floating-buttons">
 
 <!-- LINE -->
-  <a href="https://line.me/ti/p/52qOFX8iMA"
-     target="_blank"
-     class="floating-line"
-     title="用 LINE 聯絡">
-    💬
-  </a>
+ <a href="https://line.me/ti/p/52qOFX8iMA"
+   onclick="setTimeout(function(){ location.href='line://ti/p/52qOFX8iMA'; }, 100);"
+   class="floating-line"
+   title="用 LINE 聯絡">
+  💬
+</a>
 
-  <!-- 電話 -->
-  <a href="tel:0980138250"
-     class="floating-phone"
-     title="撥打電話">
-    📞
-  </a>
+ <a href="tel:0980138250"
+   class="floating-phone"
+   title="撥打電話"
+   onclick="
+     if (!/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+       alert('請用手機撥打電話：0980-138-250');
+       return false;
+     }
+   ">
+  📞
+</a>
+
 
 </div>
 
