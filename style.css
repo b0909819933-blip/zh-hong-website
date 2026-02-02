@@ -105,9 +105,7 @@ footer {
   background: #06c755;
 }
 
-.floating-phone {
-  background: #1f5a73;
-}
+
 
 /* 手機版稍微放大，方便點 */
 @media (max-width: 768px) {
@@ -117,4 +115,27 @@ footer {
     font-size: 28px;
   }
 }
+/* ===== 浮動電話按鈕（紅色） ===== */
+.floating-phone {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 56px;
+  height: 56px;
+  background: #e53935; /* 工程紅 */
+  color: white;
+  font-size: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+.floating-phone:hover {
+  background: #c62828;
+}
+
 
