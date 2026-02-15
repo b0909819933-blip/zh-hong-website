@@ -137,5 +137,60 @@ footer {
 .floating-phone:hover {
   background: #c62828;
 }
+/* ===== 工程實績照片牆 ===== */
+.project-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.project-item {
+  min-width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.project-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* 電腦版自動排滿 */
+@media (min-width: 992px) {
+  .project-gallery {
+    overflow-x: visible;
+    flex-wrap: wrap;
+  }
+
+  .project-item {
+    flex: 1 1 calc(25% - 20px);
+  }
+}
+/* ===== Lightbox 放大效果 ===== */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
 
 
